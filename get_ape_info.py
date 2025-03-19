@@ -15,7 +15,7 @@ with open('ape_abi.json', 'r') as f:
 
 ############################
 # Connect to an Ethereum node
-api_url = "https://beige-given-cow-334.mypinata.cloud"  # YOU WILL NEED TO PROVIDE THE URL OF AN ETHEREUM NODE
+api_url = "https://mainnet.infura.io/v3/c4d707f7c204485aba8ca1fb9a00a811"  # YOU WILL NEED TO PROVIDE THE URL OF AN ETHEREUM NODE
 provider = HTTPProvider(api_url)
 web3 = Web3(provider)
 
@@ -40,7 +40,7 @@ def get_ape_info(ape_id):
     
     # Convert IPFS URI to an HTTP URL via a gateway.
     if token_uri.startswith("ipfs://"):
-        token_uri_http = token_uri.replace("ipfs://", "https://beige-given-cow-334.mypinata.cloud/ipfs/")
+        token_uri_http = token_uri.replace("ipfs://", "https://ipfs.io/ipfs/")
     else:
         token_uri_http = token_uri
     
